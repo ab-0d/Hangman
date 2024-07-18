@@ -146,6 +146,7 @@ body {
   font-weight: bold;
   border: none;
   margin: 1%;
+  color: black;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -447,5 +448,10 @@ body {
 .gallows::before {
   content: "";
   position: absolute;
+}
+@media (max-width: 768px) {
+  .hang-man {
+    top: 35%;
+  }
 }
 /* End hangman */
