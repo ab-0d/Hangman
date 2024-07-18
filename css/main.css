@@ -1,0 +1,451 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  height: 95vh;
+  background-color: #240f35fc;
+  background-image: url(/images/image9.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  margin: 0;
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-color: #00000035;
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .main-container {
+    width: 750px;
+  }
+  .wrong-attempts {
+    position: absolute;
+    top: 12%;
+    left: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 15px 0px;
+    color: white;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .main-container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .main-container {
+    width: 1170px;
+  }
+}
+/* Start container */
+.main-container {
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  height: 95vh;
+  position: relative;
+  z-index: -1;
+}
+/* End container */
+/* Start difficulty and category */
+.dandc {
+  text-align: center;
+  align-self: flex-start;
+  color: white;
+}
+/* End difficulty and category */
+
+/* Start word */
+.word-container {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 3%;
+  padding: 10px;
+  justify-content: center;
+}
+.word-container span {
+  background-color: #170e27;
+  text-align: center;
+  padding: 10px;
+  width: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: inset 0px 0px 9px 0px #ffffff5e;
+}
+.win-span {
+  color: white;
+  box-shadow: inset 0px 0px 9px 0px #00ff00ad !important;
+}
+.word-container span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0e0e0e;
+  background-color: #170e27;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 9px 0px #ffffff5e;
+  top: 0;
+  left: 0;
+  filter: blur(3px);
+}
+@media (max-width: 768px) {
+  .word-container span {
+    width: 30px;
+    font-weight: normal;
+    font-size: 18px;
+  }
+}
+/* End word */
+/* Start letters */
+.letters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  align-self: flex-end;
+}
+.letters-container button {
+  background: #ffffaa;
+  text-align: center;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: none;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.letters-container button:last-child {
+  position: relative;
+}
+.letters-container button:last-child::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 6%;
+  top: 59%;
+  left: 15%;
+  background-color: black;
+}
+.letters-container button:hover {
+  background-color: #fefe39;
+}
+@media (max-width: 768px) {
+  .letters-container button {
+    width: 40px;
+  }
+}
+/* End letters */
+/* Start menu */
+.menu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 70%;
+  width: 80%;
+  background-color: #240f35fc;
+  box-shadow: #240f35fc 0px 5px 15px 3px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu .menu-button {
+  background-color: #6a2c70;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.menu .menu-button:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em #a2a8d3;
+  transform: translateY(-0.25em) scale(1.1);
+  border-color: #a2a8d3 2px solid;
+  transition: 0.25s;
+}
+.menu ul {
+  width: 100%;
+  position: absolute;
+  list-style-type: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: inherit;
+  margin: 0px;
+  gap: 5px;
+  top: 50px;
+  left: 0px;
+  background-color: #6a2c70;
+  color: white;
+  z-index: 1;
+  display: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.menu ul li {
+  background-color: #6a2c70;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 7px;
+}
+.menu ul li:hover {
+  background-color: #501d54;
+}
+.list {
+  position: relative;
+}
+.show-option {
+  display: flex !important;
+}
+
+/* End menu */
+/* Start wrong Attempts */
+.wrong-attempts {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 15px 0px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .wrong-attempts {
+    top: 55%;
+    font-size: 15px;
+  }
+}
+/* End wrong Attempts */
+
+/* Start Game Over */
+.over-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 50%;
+  width: 70%;
+  background-color: #240f35fc;
+  box-shadow: #240f35fc 0px 5px 15px 3px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  padding: 30px;
+  z-index: 1;
+}
+.over-container h2 {
+  font-size: 30px;
+  margin: 20px;
+}
+.over-container p {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+.over-container p span {
+  color: #ffffaa;
+  font-weight: bold;
+}
+.over-container .button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+.over-container .button-container button {
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: #6a2c70;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+/* End Game Over */
+/* Start win */
+.win-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 50%;
+  width: 70%;
+  background-color: #240f35fc;
+  box-shadow: #240f35fc 0px 5px 15px 3px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  padding: 30px;
+  z-index: 1;
+}
+.win-container h2 {
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+.win-container p {
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+.win-container .button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.win-container .button-container button {
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: #6a2c70;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .win-container h2 {
+    font-size: 25px;
+  }
+  .win-container p,
+  .win-container .button-container button {
+    font-size: 15px;
+  }
+}
+/* End win */
+/* Start home */
+.fa-house {
+  color: white;
+  position: absolute;
+  right: 2%;
+  top: 4%;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .fa-house {
+    right: 4%;
+  }
+}
+/* End home */
+/* End win */
+.block-pointer {
+  pointer-events: none;
+}
+/* js menu */
+.hide-menu {
+  display: none;
+}
+.remove-hide::after {
+  display: none;
+}
+.hide {
+  display: none;
+}
+/* start Hangman */
+.hang-man {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 48%;
+  right: 3%;
+  z-index: -1;
+}
+.victim,
+.roller,
+.gallows {
+  width: 30px;
+}
+.victim,
+.roller {
+  position: absolute;
+  top: 25%;
+}
+.victim {
+  right: 66%;
+}
+.roller {
+  right: 19%;
+}
+.gallows {
+  width: 250px;
+}
+.hang-man::after {
+  content: "";
+  position: absolute;
+  width: 42%;
+  height: 1.4%;
+  background-color: #170e27;
+  left: 67px;
+  top: 10px;
+  border-radius: 13px;
+}
+.hang-man::before {
+  content: "";
+  position: absolute;
+  width: 29%;
+  height: 1.4%;
+  background-color: #170e27;
+  left: 32px;
+  top: 47px;
+  border-radius: 13px;
+  transform: rotate(90deg);
+}
+.gallows::before {
+  content: "";
+  position: absolute;
+}
+/* End hangman */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <title>Hangman</title>
+  </head>
+  <body>
+    <div class="shadow"></div>
+    <i class="fa-solid fa-house"></i>
+    <div class="menu">
+      <button class="menu-button play">Play</button>
+      <div class="list">
+        <button class="menu-button language">Language</button>
+        <ul>
+          <li>Arbic</li>
+          <li>English</li>
+        </ul>
+      </div>
+      <div class="list">
+        <button class="menu-button category">Category</button>
+        <ul>
+          <li>Countries</li>
+          <li>Animals</li>
+          <li>Food</li>
+          <li>Sports</li>
+        </ul>
+      </div>
+      <div class="list">
+        <button class="menu-button difficulty">Difficulty</button>
+        <ul>
+          <li>Easy</li>
+          <li>Medium</li>
+          <li>Hard</li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="hang-man">
+        <img src="/images/gallows.png" alt="" class="gallows" />
+        <img src="/images/roller.png" alt="" class="roller" />
+        <img src="/images/victim.png" alt="" class="victim" />
+      </div>
+      <div class="wrong-attempts hide">Wrong attempts : <span></span></div>
+      <div class="dandc">
+        <h1></h1>
+        <span></span>
+      </div>
+      <div class="game">
+        <div class="word-container"></div>
+        <div class="letters-container"></div>
+      </div>
+    </div>
+  </body>
+  <script src="/scripts/main.js"></script>
+</html>
