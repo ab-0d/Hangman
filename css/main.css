@@ -7,7 +7,7 @@ body {
   position: relative;
   height: 95vh;
   background-color: #240f35fc;
-  background-image: url(images/image9.png);
+  background-image: url("images/image9.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
