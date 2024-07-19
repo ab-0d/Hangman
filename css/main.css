@@ -451,7 +451,6 @@ body {
 }
 @media (max-width: 768px) {
   .hang-man {
-<<<<<<< HEAD
     top: 45%;
   }
   .wrong-attempts {
@@ -471,9 +470,6 @@ body {
   .gallows,
   .roller {
     filter: hue-rotate(45deg);
-=======
-    top: 35%;
->>>>>>> f3bd007d58314f27cec750937f6e1fd90f854363
   }
 }
 /* End hangman */
