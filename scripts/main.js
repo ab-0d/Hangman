@@ -11,11 +11,11 @@ let home = document.querySelector(".fa-house");
 let man = document.querySelector(".victim");
 let roller = document.querySelector(".roller");
 // Audios
-let correctAudio = new Audio("/audios/correct.mp3");
-let worngAudio = new Audio("/audios/worng.mp3");
-let pullAudio = new Audio("/audios/hang.mp3");
-let rollerAudio = new Audio("/audios/rotate.mp3");
-let loseAudio = new Audio("/audios/lose.mp3");
+let correctAudio = new Audio("audios/correct.mp3");
+let worngAudio = new Audio("audios/worng.mp3");
+let pullAudio = new Audio("audios/hang.mp3");
+let rollerAudio = new Audio("audios/rotate.mp3");
+let loseAudio = new Audio("audios/lose.mp3");
 
 // Menu
 //  Hide the options menu when the play button is pressed

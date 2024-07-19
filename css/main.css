@@ -7,7 +7,7 @@ body {
   position: relative;
   height: 95vh;
   background-color: #240f35fc;
-  background-image: url(/images/image9.png);
+  background-image: url("../images/image9.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -146,6 +146,7 @@ body {
   font-weight: bold;
   border: none;
   margin: 1%;
+  color: black;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -447,5 +448,28 @@ body {
 .gallows::before {
   content: "";
   position: absolute;
+}
+@media (max-width: 768px) {
+  .hang-man {
+    top: 45%;
+  }
+  .wrong-attempts {
+    top: 16%;
+  }
+}
+@media (max-width: 440px) {
+  .hang-man {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 34%;
+    left: 3%;
+    transform: rotateY(180deg);
+    z-index: -1;
+  }
+  .gallows,
+  .roller {
+    filter: hue-rotate(45deg);
+  }
 }
 /* End hangman */
